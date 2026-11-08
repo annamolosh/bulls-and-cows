@@ -14,8 +14,8 @@ describe ("evaluateGuess", ()=> {
         const result = evaluateGuess("4271", "1273");
         
         expect(result).toEqual({
-            bulls: 1,
-            cows: 2,
+            bulls: 2,
+            cows: 1,
         });
     });
     it("should return all bulls when the guess matches the secret", () => {
