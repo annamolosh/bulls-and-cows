@@ -29,4 +29,10 @@ describe("countPossibleSecrets",() => {
     it("should return 0 when length is greater than base", ()=> {
         expect(countPossibleSecrets(3,2)).toBe(0)
     })
+    it("should return 0 for negative length", ()=> {
+        expect(countPossibleSecrets(-1,10)).toBe(0)
+    })
+    it("should return 0 for invalid base", ()=> {
+        expect(countPossibleSecrets(2,-10)).toBe(0)
+    })
 })
