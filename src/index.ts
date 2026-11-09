@@ -1,3 +1,3 @@
-const projectName: string = 'Bulls and Cows';
+import { renderApp } from "./ui/render.js";
 
-console.log(projectName);
+renderApp();
