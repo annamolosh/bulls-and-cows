@@ -1,8 +1,8 @@
 import { createDigitValidator, isValidGuess } from "../src/core/validators.js";
-import {describe, it, expect} from "vitest";
+import { describe, it, expect } from "vitest";
 
 describe("createDigitValidator", () => {
-    it("should accept only 0 and 1 in binary system", ()=> {
+    it("should accept only 0 and 1 in binary system", () => {
         const isValidDigit = createDigitValidator(2);
 
         expect(isValidDigit("0")).toBe(true);
@@ -16,7 +16,7 @@ describe("createDigitValidator", () => {
         expect(isValidDigit(" ")).toBe(false);
         expect(isValidDigit("@")).toBe(false);
     });
-    it("should accept only 0 and 7 in octal system", ()=> {
+    it("should accept only 0 and 7 in octal system", () => {
         const isValidDigit = createDigitValidator(8);
 
         expect(isValidDigit("0")).toBe(true);
@@ -35,7 +35,7 @@ describe("createDigitValidator", () => {
         expect(isValidDigit(" ")).toBe(false);
         expect(isValidDigit("@")).toBe(false);
     });
-     it("should accept only 0 and 9 in decimal system", ()=> {
+    it("should accept only 0 and 9 in decimal system", () => {
         const isValidDigit = createDigitValidator(10);
 
         expect(isValidDigit("0")).toBe(true);
@@ -55,7 +55,7 @@ describe("createDigitValidator", () => {
         expect(isValidDigit(" ")).toBe(false);
         expect(isValidDigit("@")).toBe(false);
     });
-     it("should accept hexadecimal digits from 0 to 9 and a to f", ()=> {
+    it("should accept hexadecimal digits from 0 to 9 and a to f", () => {
         const isValidDigit = createDigitValidator(16);
 
         expect(isValidDigit("0")).toBe(true);
