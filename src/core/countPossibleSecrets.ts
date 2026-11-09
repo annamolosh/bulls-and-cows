@@ -24,7 +24,4 @@ export function countPossibleSecrets (length: number, base: number): number {
     
     cache.set(key,result)
     return result
-
-
-    
 }
